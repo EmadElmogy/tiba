@@ -1,0 +1,388 @@
+@media(max-width : 1920px){
+   
+}
+
+@media(max-width : 1366px){
+    header {
+    background: #f2f3f5;
+    overflow: hidden;
+    height: 6vh;
+}
+    #slider .carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 79vh;
+}
+    #slider .overlay {
+    background: rgba(0,0,0,0.7);
+    width: 100%;
+    height: 79vh;
+    position: absolute;
+    z-index: 1;
+}
+}
+
+@media(max-width : 1280px){
+    header {
+    background: #F2F3F5 none repeat scroll 0% 0%;
+    overflow: hidden;
+    height: 5vh;
+}
+    #slider .carousel-inner > .item > img, .carousel-inner > .item > a > img {
+    line-height: 1;
+    width: 100%;
+    height: 79vh;
+}
+}
+
+@media(max-width : 1080px){
+    header {
+    background: #F2F3F5 none repeat scroll 0% 0%;
+    overflow: hidden;
+    height: 2vh;
+}
+    #menu .navbar-default {
+    background-color: #FFF;
+    border-color: transparent;
+    border-radius: 0px;
+    margin-bottom: 0px;
+    min-height: 85px;
+}
+    #slider .carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 25vh;
+}
+    #slider .overlay {
+    background: rgba(0, 0, 0, 0.7) none repeat scroll 0% 0%;
+    width: 100%;
+    height: 25vh;
+    position: absolute;
+    z-index: 1;
+}
+    #slider .carousel-inner > .item > img, .carousel-inner > .item > a > img {
+    line-height: 1;
+    width: 100%;
+    height: 25vh;
+}
+    #about img {
+    width: 85%;
+    border-radius: 50%;
+    height: 370px;
+}
+    #join .join-content .form-inline .form-control {
+    display: inline-block;
+    vertical-align: middle;
+    border: 1px solid #FFF;
+    border-radius: 0px;
+    background: transparent none repeat scroll 0% 0%;
+    width: 340px;
+    margin-right: 10px;
+    color: #FFF;
+}
+    #join .join-content .text-center {
+    border-left: none;
+    text-align: left;
+    margin-top: 35px;
+}
+    
+}
+
+@media(max-width : 1024px){
+    header {
+    background: #F2F3F5 none repeat scroll 0% 0%;
+    overflow: hidden;
+    height: 5vh;
+}
+    #about .container,#news .container,#join .container,#service .container,#partener .container,#weather .container{
+        width:initial;
+    }
+    #slider .carousel-inner {
+    line-height: 1;
+    width: 100%;
+    height: 50vh;
+}
+    #slider .overlay {
+    background: rgba(0, 0, 0, 0.7) none repeat scroll 0% 0%;
+    width: 100%;
+    height: 50vh;
+    position: absolute;
+    z-index: 1;
+}
+    #slider .carousel-inner > .item > img, .carousel-inner > .item > a > img {
+    line-height: 1;
+    width: 100%;
+    height: 50vh;
+}
+    #about img {
+    width: 85%;
+    border-radius: 50%;
+    height: 340px;
+}
+    #join .join-content .form-inline .form-control {
+    display: inline-block;
+    vertical-align: middle;
+    border: 1px solid #FFF;
+    border-radius: 0px;
+    background: transparent none repeat scroll 0% 0%;
+    width: 295px;
+    margin-right: 10px;
+    color: #FFF;
+}
+}
+
+@media(max-width : 800px){
+    header {
+    background: #F2F3F5 none repeat scroll 0% 0%;
+    overflow: hidden;
+    height: 6vh;
+}
+
+    header .col-md-9 .col-xs-12{
+        height:38px;
+    }
+    header .col-md-9 .col-xs-12{
+        width:33.33%;
+    }
+    #menu .navbar-default .navbar-nav > li > a {
+    color: #000;
+    font-size: 14px;
+    font-weight: normal;
+    transition: all 0.4s ease 0s;
+    padding: 10px;
+}
+
+    #menu .navbar-default img {
+    width: 22%;
+    margin-top: 12px;
+}
+    #slider .carousel-caption h1 {
+    margin: auto auto 20px;
+    width: 30%;
+    font-size: 64px;
+    border-bottom: 2px solid #36B149;
+    font-weight: bold;
+}
+    #about img {
+    width: 55%;
+    border-radius: 50%;
+    height: 335px;
+    margin:auto;
+}
+    #menu .navbar-fixed-top .navbar-right {
+    margin-top: 25px;
+    margin-bottom: 5px;
+}
+    #about .container,#news .container,#join .container,#service .container,#partener .container,#weather .container{
+        width:initial;
+    }
+    .owl-carousel .owl-stage-outer {
+    position: relative;
+    right: 0px;
+    overflow: hidden;
+}
+    .owl-nav {
+    text-align: center;
+    margin: 50px;
+}
+    #service .service-details img {
+    height: 150px;
+    margin-bottom: 15px;
+}
+    #join .join-content .form-inline .form-control {
+    display: block;
+    vertical-align: middle;
+    border: 1px solid #FFF;
+    border-radius: 0px;
+    background: transparent none repeat scroll 0% 0%;
+    margin-right: 0px;
+    color: #FFF;
+    width: 100%;
+    margin-bottom: 10px;
+}
+    #join .form-inline .form-group{
+        width:100%;
+    }
+    #slider .carousel-inner {
+    line-height: 1;
+    width: 100%;
+    height: 70vh;
+}
+    #slider .overlay {
+    background: rgba(0, 0, 0, 0.7) none repeat scroll 0% 0%;
+    width: 100%;
+    height: 70vh;
+    position: absolute;
+    z-index: 1;
+}
+    #slider .carousel-inner > .item > img, .carousel-inner > .item > a > img {
+    line-height: 1;
+    width: 100%;
+    height: 70vh;
+}
+}
+
+@media(max-width : 768px){
+    header {
+    background: #F2F3F5 none repeat scroll 0% 0%;
+    overflow: hidden;
+    height: 7.5vh;
+}
+
+    #slider .carousel-inner {
+    line-height: 1;
+    width: 100%;
+    height: 40vh;
+}
+    #slider .overlay {
+    background: rgba(0, 0, 0, 0.7) none repeat scroll 0% 0%;
+    width: 100%;
+    height: 40vh;
+    position: absolute;
+    z-index: 1;
+}
+    #slider .carousel-inner > .item > img, .carousel-inner > .item > a > img {
+    line-height: 1;
+    width: 100%;
+    height: 40vh;
+}
+    #about img {
+    width: 55%;
+    border-radius: 50%;
+    height: 325px;
+    margin: auto;
+}
+}
+
+@media(max-width : 600px){
+    header {
+    background: #F2F3F5 none repeat scroll 0% 0%;
+    overflow: hidden;
+    height: 10vh;
+}
+    #menu .navbar-default img {
+    width: 22%;
+    margin-top: -75px;
+    margin-left: 15px;
+}
+    #menu .navbar-default {
+    background-color: #FFF;
+    border-color: transparent;
+    border-radius: 0px;
+    margin-bottom: 0px;
+    min-height: 60px;
+}
+    .navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    border-color: #E7E7E7;
+    margin-top: 10px;
+}
+    #menu .navbar-default .navbar-nav li a::before {
+    content: "";
+    position: absolute;
+    background-color: #36B149;
+    left: 0%;
+    height: 2px;
+    width: 0px;
+    bottom: 0px;
+    transition: all 0.4s ease 0s;
+}
+    #menu .navbar-default .navbar-nav > li > a:hover::before {
+    content: "";
+    position: absolute;
+    background-color: #36B149;
+    left: 0%;
+    height: 2px;
+    width: 100%;
+    bottom: 0px;
+}
+    #slider .carousel-inner {
+    line-height: 1;
+    width: 100%;
+    height: 50vh;
+}
+    #slider .overlay {
+    background: rgba(0, 0, 0, 0.7) none repeat scroll 0% 0%;
+    width: 100%;
+    height: 50vh;
+    position: absolute;
+    z-index: 1;
+}
+    #slider .carousel-inner > .item > img, .carousel-inner > .item > a > img {
+    line-height: 1;
+    width: 100%;
+    height: 50vh;
+}
+    #about img {
+    width: 55%;
+    border-radius: 50%;
+    height: 250px;
+    margin: auto;
+}
+    #service .service-details img {
+    height: 150px;
+    margin-bottom: 15px;
+    width: 100%;
+}
+    #news .news-details img {
+    height: 200px;
+    width: 100%;
+}
+}
+
+@media(max-width : 568px){
+
+}
+
+@media(max-width : 480px){
+
+}
+
+@media(max-width : 320px){
+    header {
+    background: #F2F3F5 none repeat scroll 0% 0%;
+    overflow: hidden;
+    height: 14vh;
+}
+    #menu .navbar-default img {
+    width: 45%;
+    margin-top: -70px;
+    margin-left: 15px;
+}
+    #slider .carousel-inner {
+    line-height: 1;
+    width: 100%;
+    height: 100vh;
+}
+    #slider .overlay {
+    background: rgba(0, 0, 0, 0.7) none repeat scroll 0% 0%;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: 1;
+}
+    #slider .carousel-inner > .item > img, .carousel-inner > .item > a > img {
+    line-height: 1;
+    width: 100%;
+    height: 100vh;
+}
+    #slider .carousel-caption h1 {
+    margin: auto auto 20px;
+    width: 75%;
+    font-size: 64px;
+    border-bottom: 2px solid #36B149;
+    font-weight: bold;
+}
+    #about img {
+    width: 100%;
+    border-radius: 50%;
+    height: 210px;
+    margin: auto;
+}
+}
+
+
+
+
+
