@@ -31,7 +31,8 @@
                                     <!-- &nbsp;&nbsp;&nbsp; <i class="fa fa-clock-o"></i><span>10 nov,2016</span> -->
                                   </p>
                                  <p>{{$one_news->details_en}}</p>
-                                   <a href="new-details.html" class="btn btn-default pull-right" role="button">More </a>
+                                 @endif
+                                   <a href="{{ asset('/news/'.$one_news->id) }}" class="btn btn-default pull-right" role="button">More </a>
                                </div>
                            </div>
                        </div>

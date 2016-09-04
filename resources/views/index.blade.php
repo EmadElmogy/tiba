@@ -103,7 +103,7 @@
                        <div class="row">
                          @foreach($partners as $partner)
                            <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
-                               <a href="partener-details.html">
+                               <a href="{{asset('/partner/'.$partner->id)}}">
                                    <img src="{{URL($partner->image)}}" alt="Owl Image" class="img-responsive" />
                                </a>
                            </div>
@@ -123,27 +123,31 @@
                <div class="col-xs-12">
                    <div class="row text-center">
                        <h2 class="title">{{trans('home.service')}}</h2> </div>
-                       @foreach($services as $service)
-                   <div class="col-sm-6 col-xs-12">
-                       <div class="service-details">
-                           <div class="row">
-                               <div class="col-md-6 col-xs-12"> <img src="{{URL($service->image)}}" alt="img1" class="img-responsive"> </div>
-                               <div class="col-md-6 col-xs-12">
-                                 @if( Config::get('languages')[App::getLocale()] == 'Arabic' )
-                                   <h3>{{$service->title_ar}}</h3>
-                                   <p>{{$service->desc_ar}}</p>
-                                   <a href="services-details.html" class="btn btn-default">المزيد</a>
-                                   @elseif( Config::get('languages')[App::getLocale()] == 'English' )
-                                   <h3>{{$service->title_en}}</h3>
-                                   <p>{{$service->desc_en}}</p>
-                                   <a href="services-details.html" class="btn btn-default">more</a>
-                                   @endif
-                                 </div>
+                       @foreach ($services as $key=>$service)
+                       <div class="col-sm-6 col-xs-12">
+                           <div class="service-details">
+                               <div class="row">
+                                 <div class="col-md-6 col-xs-12"> <img src="{{asset('/').$service->image}}" alt="img1" class="img-responsive"> </div>
+                                   <div class="col-md-6 col-xs-12">
+                                     @if( Config::get('languages')[App::getLocale()] == 'Arabic' )
+                                        <h3>{{$service->title_ar}}</h3>
+                                        <p>{{$service->desc_ar}}</p>
+                                        @if($service->title_en != "service")
+                                         <a href="{{ asset('/'.$service->title_en) }}" class="btn btn-default">المزيد</a>
+                                        @endif
+                                       @elseif( Config::get('languages')[App::getLocale()] == 'English' )
+                                         <h3>{{$service->title_en}}</h3>
+                                         <p>{{$service->desc_en}}</p>
+                                         @if($service->title_en != "service")
+                                          <a href="{{ asset('/'.$service->title_en) }}" class="btn btn-default">more</a>
+                                         @endif
+                                       @endif
+                                     </div>
+                               </div>
                            </div>
                        </div>
-                   </div>
-                   @endforeach
-                   <div class="row text-center"><a href="services.html" class="btn btn-default" role="button">{{trans('home.more')}}</a> </div>
+                       @endforeach
+                   <div class="row text-center"><a href="{{ asset('/service') }}" class="btn btn-default" role="button">{{trans('home.more')}}</a> </div>
                </div>
            </div>
        </div>

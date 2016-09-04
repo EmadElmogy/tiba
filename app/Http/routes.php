@@ -47,6 +47,15 @@ Route::group(['prefix' => 'admin'], function () {
 Route::get('lang/{lang}', ['as'=>'lang.switch', 'uses'=>'LanguageController@switchLang']);
 
 Route::get('/','homeController@index');
+Route::get('/partner/{id}','homeController@get_partner');
+Route::get('/service','homeController@get_service');
+Route::get('/service/{id}','homeController@get_service_details');
+Route::get('/crops','homeController@get_crop');
+Route::get('/crop/{id}','homeController@get_crop_details');
+Route::get('/search','homeController@search');
+Route::get('/converter','homeController@get_converter');
+Route::get('/solution','homeController@get_solution');
+Route::get('/solution/{id}','homeController@get_solution_details');
 Route::get('/news/{id}','homeController@get_news');
 Route::get('/categories','homeController@get_cats');
 Route::get('/allNews','homeController@get_all_news')->name('more_news');

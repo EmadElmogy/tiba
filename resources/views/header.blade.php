@@ -120,8 +120,12 @@
                     </div>
                 </div>
                 <div class="col-md-3 col-xs-12 item">
-                    <div class="row"> <i class="fa fa-search"></i>
-                        <input type="text" class="form-control" placeholder="{{trans('home.search')}}" /> </div>
+                    <div class="row">
+                      <form method="GET" action="{{ asset('/search') }}">
+                        <input type="text" name="search" class="form-control" placeholder="{{trans('home.search')}}" />
+                        <input type="submit"style="position: absolute; left: -9999px; width: 1px; height: 1px;"tabindex="-1" />
+                      </form>
+                     </div>
                 </div>
             </div>
         </div>

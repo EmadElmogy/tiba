@@ -16,18 +16,23 @@ use App\Category;
 use App\Technology;
 use App\Product;
 use App\Contact;
+use App\Crop;
+use App\Converter;
+use App\Solution;
 use App\Subscribe;
+use App\Product_Image;
 use DB;
+use App;
 
 class homeController extends Controller
 {
     public function index(){
-      $sliders=Slider::all();
-      $about=About::first();
-      $partners=Partner::all();
-      $services=Service::paginate(4);
-      $news=News::paginate(2);
-      $page_flag='outer';
+      $sliders = Slider::all();
+      $about = About::first();
+      $partners = Partner::all();
+      $news = News::paginate(2);
+      $page_flag = 'outer';
+      $services = Service::paginate(4) ;
       return view('index',compact('sliders','about','partners','services','news','page_flag'));
     }
 
@@ -80,5 +85,72 @@ class homeController extends Controller
       Subscribe::newSubscriber($request);
       \Session::flash('message', trans('home.subscribe_message'));
       return \Redirect::back();
+    }
+    public function get_partner($id){
+      $page_flag='inner';
+      $partener = Partner::findOrFail($id);
+      if ($partener) {
+        $products = Product_Image::where('partner_id' , $id)->orderBy('created_at','DESC')->limit(3)->get();
+        return view('partener_details' ,compact('page_flag','products','partener'));
+      }
+      abort(404);
+    }
+    public function get_service(){
+      $page_flag='inner';
+      $services = Service::paginate(8);
+      return view('service' ,compact('page_flag','services'));
+    }
+    public function get_service_details($id){
+      $page_flag='inner';
+      $service = Service::findOrFail($id);
+      if ($service) {
+        return view('service_details' ,compact('page_flag','service'));
+      }
+      abort(404);
+    }
+    public function get_crop(){
+      $page_flag='inner';
+      $crops = Crop::paginate(12);
+      return view('crop' ,compact('page_flag','crops'));
+    }
+    public function get_crop_details($id){
+      $page_flag='inner';
+      $crop = Crop::findOrFail($id);
+      if ($crop) {
+        return view('crop_details' ,compact('page_flag','crop'));
+      }
+      abort(404);
+    }
+    public function get_converter(){
+      $page_flag='inner';
+      $converters = Converter::paginate(8);
+      return view('converter' ,compact('page_flag','converters'));
+    }
+    public function get_solution(){
+      $page_flag='inner';
+      $solutions = Solution::paginate(8);
+      return view('solution' ,compact('page_flag','solutions'));
+    }
+    public function get_solution_details($id){
+      $page_flag='inner';
+      $solution = Solution::findOrFail($id);
+      if ($solution) {
+        return view('solution_details' ,compact('page_flag','solution'));
+      }
+      abort(404);
+    }
+    public function search(Request $request){
+      $page_flag='inner';
+      if( App::isLocale('Arabic')){
+        $results['service'] = Service::where('title_ar','like','%'.$request->search.'%')->get();
+        $results['partener'] = Partner::where('name_ar','like','%'.$request->search.'%')->get();
+        $results['product'] = Product::where('title_ar','like','%'.$request->search.'%')->get();
+      }
+      else {
+        $results['service'] = Service::where('title_en','like','%'.$request->search.'%')->get();
+        $results['partener'] = Partner::where('name_en','like','%'.$request->search.'%')->get();
+        $results['product'] = Product::where('title_en','like','%'.$request->search.'%')->get();
+      }
+      return view('search' ,compact('page_flag','results'));
     }
 }
