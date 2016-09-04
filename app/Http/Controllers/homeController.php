@@ -141,10 +141,11 @@ class homeController extends Controller
     }
     public function search(Request $request){
       $page_flag='inner';
-      if( App::isLocale('Arabic')){
+      if( App::isLocale('ar')){
         $results['service'] = Service::where('title_ar','like','%'.$request->search.'%')->get();
         $results['partener'] = Partner::where('name_ar','like','%'.$request->search.'%')->get();
         $results['product'] = Product::where('title_ar','like','%'.$request->search.'%')->get();
+        return $results;
       }
       else {
         $results['service'] = Service::where('title_en','like','%'.$request->search.'%')->get();
